@@ -34,9 +34,9 @@ Este proyecto consiste en una aplicación de escritorio en **Java (Swing)** que 
 2. Ejecuta el siguiente script SQL:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS clinica_veterinaria;
+CREATE DATABASE veterinaria;
 
-USE clinica_veterinaria;
+USE veterinaria;
 
 CREATE TABLE persona (
     documento VARCHAR(20) PRIMARY KEY,
@@ -49,9 +49,10 @@ CREATE TABLE mascota (
     nombre VARCHAR(100),
     tipo VARCHAR(50),
     edad INT,
-    documento VARCHAR(20),
-    FOREIGN KEY (documento) REFERENCES persona(documento)
+    documento_duenio VARCHAR(20),
+    FOREIGN KEY (documento_duenio) REFERENCES persona(documento)
 );
+
 ```
 
 ---
